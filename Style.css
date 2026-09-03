@@ -1,0 +1,139 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Georgia,serif;
+background:linear-gradient(135deg,#09001a,#160047,#050014);
+color:white;
+padding:25px;
+overflow:auto;
+}
+
+.stars{
+position:fixed;
+inset:0;
+background-image:
+radial-gradient(white 1px,transparent 1px),
+radial-gradient(white 1px,transparent 1px);
+background-size:70px 70px,110px 110px;
+background-position:0 0,30px 40px;
+opacity:.35;
+}
+
+.card{
+position:relative;
+width:100%;
+max-width:600px;
+padding:45px 30px;
+text-align:center;
+border:1px solid rgba(255,255,255,.25);
+border-radius:30px;
+background:rgba(20,5,45,.82);
+box-shadow:0 0 50px rgba(120,70,255,.35);
+backdrop-filter:blur(10px);
+animation:appear 1.5s ease;
+}
+
+.feather{
+font-size:55px;
+animation:float 3s ease-in-out infinite;
+}
+
+.small{
+margin-top:10px;
+font-size:15px;
+letter-spacing:3px;
+opacity:.75;
+}
+
+h1{
+margin-top:10px;
+font-size:42px;
+background:linear-gradient(90deg,#7ddcff,#c9a7ff,#ffffff);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+h2{
+margin-top:8px;
+font-size:23px;
+color:#ffd6f6;
+}
+
+.krishna{
+font-size:75px;
+margin:25px 0 10px;
+animation:float 3s ease-in-out infinite;
+}
+
+.message{
+font-size:17px;
+line-height:1.8;
+color:#eee5ff;
+}
+
+.message strong{
+color:#ffb7df;
+font-size:19px;
+}
+
+.blessing{
+margin-top:25px;
+padding:15px;
+border-radius:20px;
+background:rgba(255,255,255,.08);
+color:#d8c4ff;
+font-size:18px;
+}
+
+.footer{
+margin-top:25px;
+font-size:20px;
+color:#ffc4e8;
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-10px);
+}
+}
+
+@keyframes appear{
+from{
+opacity:0;
+transform:scale(.9);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+@media(max-width:500px){
+.card{
+padding:35px 20px;
+}
+
+h1{
+font-size:34px;
+}
+
+h2{
+font-size:20px;
+}
+
+.message{
+font-size:15px;
+line-height:1.7;
+}
+}
